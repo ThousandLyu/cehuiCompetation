@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="net.ossrs.yasea.demo.MainActivity">
+
+    <net.ossrs.yasea.SrsCameraView
+        android:id="@+id/glsurfaceview_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/publish"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="publish" />
+
+    <Button
+        android:id="@+id/swCam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/publish"
+        android:layout_toRightOf="@+id/publish"
+        android:text="switch" />
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/publish"
+        android:layout_toRightOf="@id/swCam"
+        android:text="record" />
+
+    <Button
+        android:id="@+id/swEnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/publish"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/record"
+        android:text="soft encoder" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_TCP"
+        android:text="rtmp://5352fj5355.wicp.vip:38633/live/stream1" />
+
+
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_Tcp"
+        android:text="lat:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lon"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lat"
+        android:text="lon:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_Tcp"
+        android:layout_toRightOf="@+id/lat"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lat"
+        android:layout_toRightOf="@+id/lon"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_TCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5352fj5355.wicp.vip:38633" />
+
+    <Button
+        android:id="@+id/btn_Tcp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/url"
+        android:text="连接TCP服务器" />
+
+
+</RelativeLayout>

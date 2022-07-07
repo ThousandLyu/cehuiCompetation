@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.65">
+
+        <ImageView
+            android:id="@+id/img_bus"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/bus_img" />
+
+
+        <TextView
+            android:id="@+id/tv_BUS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_bus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:text="  车名  "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_BUS_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_BUS"
+            android:layout_centerHorizontal="true"
+            android:text="校园小公交"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_bus_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_BUS_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="费用:   "
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="  温馨提醒:\n  上车请配到好口罩,\n  防疫工作从我做起!"
+            android:textColor="#3D9A0F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_next_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="130dp"
+            android:text="正在前往:" />
+
+        <TextView
+            android:id="@+id/tv_next_station_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_toRightOf="@+id/tv_next_station"
+            android:text="文德楼" />
+
+        <TextView
+            android:id="@+id/tv_seats_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_next_station"
+            android:layout_marginLeft="15dp"
+            android:text="剩余座位:" />
+
+        <TextView
+            android:id="@+id/tv_predict_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_seats_left"
+            android:layout_marginLeft="15dp"
+            android:text="预计时间:" />
+
+        <TextView
+            android:id="@+id/tv_predict_time_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_seats_left"
+            android:layout_toRightOf="@+id/tv_predict_time"
+            android:text="xx分钟" />
+
+        <TextView
+            android:id="@+id/tv_close_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="  最近上车站点:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_close_station_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_close_station"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="文德楼"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_myLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="当前位置:" />
+
+        <TextView
+            android:id="@+id/tv_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_myLocation"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="经度:" />
+
+        <TextView
+            android:id="@+id/tv_lon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lat"
+            android:layout_marginLeft="25dp"
+
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="纬度:" />
+
+        <TextView
+            android:id="@+id/tv_seats_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_next_station"
+            android:layout_toRightOf="@+id/tv_seats_left"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_lat_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_myLocation"
+            android:layout_toRightOf="@+id/tv_lat"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_lon_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lat"
+            android:layout_toRightOf="@+id/tv_lat"
+
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_GPS_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lon"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="定位模式:" />
+
+        <TextView
+            android:id="@+id/tv_GPS_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lon"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tv_GPS_state"
+            android:text="未初始化" />
+
+        <TextView
+            android:id="@+id/tv_Location_Accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_GPS_state"
+            android:layout_marginLeft="25dp"
+
+            android:layout_toRightOf="@+id/tv_BUS"
+            android:text="定位精度:" />
+
+        <TextView
+            android:id="@+id/tv_Accuracy_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_GPS_state"
+            android:layout_toRightOf="@+id/tv_Location_Accuracy"
+            android:text="null" />
+
+
+    </RelativeLayout>
+</LinearLayout>

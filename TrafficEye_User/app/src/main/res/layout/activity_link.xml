@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#5C2196F3"
+        android:gravity="center"
+        android:text="连接服务器地址"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/et_tcpUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10.3.207.183:8080"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/btn_TCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_lon"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="#8000FF"
+        android:text="连接"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
